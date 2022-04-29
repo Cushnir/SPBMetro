@@ -3,15 +3,15 @@ public class Arithmetic {
     public int y = 0;
 
     public void launch (){
-        this.Sum (x , y);
-        this.Work(x , y);
-        this.Comparison(x ,y);
+        this.sum (x , y);
+        this.work(x , y);
+        this.comparison(x ,y);
     }
     public Arithmetic(int firstNumber, int secondNumer) {
         x = firstNumber;
         y = secondNumer;
     }
-    public void Comparison(int x, int y) {
+    public void comparison(int x, int y) {
         int max = 0;
         int min = 0;
         if (x >= y) {
@@ -27,13 +27,13 @@ public class Arithmetic {
         }
     }
 
-    public void Sum(int x, int y) {
+    public void sum(int x, int y) {
         int sum = x + y;
         System.out.println("          Действие с числами :");
         System.out.println("Сумма чисел = " + sum + "");
     }
 
-    public void Work(int x, int y) {
+    public void work(int x, int y) {
         int work = x * y;
         System.out.println("Произведение чисел = " + work + "");
     }

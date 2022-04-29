@@ -8,9 +8,9 @@ public class Main {
         Arithmetic arithmetic = new Arithmetic(7 , 5);
         arithmetic.launch();
         Printer stringQueue = new Printer();
-        stringQueue.Appander("Главное в жизни - никогда не сдаваться. " , "Смысловая нагрузка " , 1);
-        stringQueue.Appender("Капец всему " , "Лирика");
-        stringQueue.Append(" Золушка");
+        stringQueue.appander("Главное в жизни - никогда не сдаваться. " , "Смысловая нагрузка " , 1);
+        stringQueue.appender("Капец всему " , "Лирика");
+        stringQueue.appender(" Золушка");
 
 
     }
