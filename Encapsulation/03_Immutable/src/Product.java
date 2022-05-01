@@ -3,20 +3,24 @@ public class Product {
     private int price;
     private final int barCode;
 
-    public Product(String name , int barCode){
+    public Product(String name, int barCode) {
         this.name = name;
         this.barCode = barCode;
     }
-    public int getBarCode(){
+
+    public int getBarCode() {
         return barCode;
     }
-    public String getName(){
-        return  name;
+
+    public String getName() {
+        return name;
     }
-    public void setPrice(int price){
+
+    public void setPrice(int price) {
         this.price = price;
     }
-    public int getPrice(){
+
+    public int getPrice() {
         return price;
     }
 }
