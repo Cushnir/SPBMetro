@@ -33,12 +33,12 @@ public class Basket {
     public  static  int getTotalBasketValue(){
         return totalBasketValue;
     }
-    public static double setAveragePriceOfGoods() {
+    public static double getAveragePriceOfGoods() {
             double averagePriceOfGoods = totalBasketValue / totalNumerOfGoods;
             return averagePriceOfGoods;
         }
 
-    public static double setAverageBasketValue(){
+    public static double getAverageBasketValue(){
         double averageBasketValue = totalBasketValue / totalNumerOfBaskets;
         return averageBasketValue;
     }
@@ -94,8 +94,8 @@ public class Basket {
             System.out.println();
             System.out.println("Масса указанных товаров = " + totalWeight + " kg");
             setTotalBasketValue(totalPrice);
-            setAverageBasketValue();
-            setAveragePriceOfGoods();
+            getAverageBasketValue();
+            getAveragePriceOfGoods();
         }
     }
 }

@@ -11,8 +11,8 @@ public class Main {
         Basket vasea = new Basket();
         vasea.add("milk" , 50 , 10 , 0.3 );
         vasea.print("       Содержимое корзины :");
-        System.out.println("Средняя цена корзины = " + Basket.setAverageBasketValue() + "");
-        System.out.println("средняя цена товаров = " + Basket.setAveragePriceOfGoods() + "");
+        System.out.println("Средняя цена корзины = " + Basket.getAverageBasketValue() + "");
+        System.out.println("средняя цена товаров = " + Basket.getAveragePriceOfGoods() + "");
         Arithmetic arithmetic = new Arithmetic(7 , 5);
         arithmetic.launch();
         Printer stringQueue = new Printer();
