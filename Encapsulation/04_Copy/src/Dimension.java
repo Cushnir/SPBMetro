@@ -21,7 +21,7 @@ public class Dimension {
         return new Dimension(height, widht, lenght);
     }
 
-    public int setVolume() {
+    public int getVolume() {
         int volume = height * widht * lenght;
         return volume;
     }

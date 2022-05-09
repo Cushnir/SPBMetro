@@ -1,17 +1,23 @@
 public class Main {
 
     public static void main(String[] args) {
-        Basket basket = new Basket();
-        basket.add("Milk", 40);
-        basket.add("bread" , 35 , 2 , 0.7);
-        basket.print("       Содержимое корзины :");
+        Basket kolea = new Basket();
+
+        kolea.add("bread" , 35  , 5 ,0.7);
+        kolea.add("milk " , 50  , 2 , 0.3);
+        kolea.add("egg" , 2);
+        kolea.add("water" , 5 , 2);
+        kolea.print("       Содержимое корзины :");
+        Basket vasea = new Basket();
+        vasea.add("milk" , 50 , 10 , 0.3 );
+        vasea.print("       Содержимое корзины :");
+        System.out.println("Средняя цена корзины = " + Basket.setAverageBasketValue() + "");
+        System.out.println("средняя цена товаров = " + Basket.setAveragePriceOfGoods() + "");
         Arithmetic arithmetic = new Arithmetic(7 , 5);
         arithmetic.launch();
         Printer stringQueue = new Printer();
         stringQueue.appander("Главное в жизни - никогда не сдаваться. " , "Смысловая нагрузка " , 1);
         stringQueue.appender("Капец всему " , "Лирика");
         stringQueue.appender(" Золушка");
-
-
     }
 }
