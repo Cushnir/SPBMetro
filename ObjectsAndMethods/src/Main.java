@@ -12,12 +12,16 @@ public class Main {
         vasea.add("milk" , 50 , 10 , 0.3 );
         vasea.print("       Содержимое корзины :");
         System.out.println("Средняя цена корзин = " + Basket.getAverageBasketValue() + "");
-        System.out.println("средняя цена товаров = " + Basket.getAveragePriceOfGoods() + "");
+        System.out.println("Средняя цена товаров = " + Basket.getAveragePriceOfGoods() + "");
         Arithmetic arithmetic = new Arithmetic(7 , 5);
         arithmetic.launch();
         Printer stringQueue = new Printer();
         stringQueue.appander("Главное в жизни - никогда не сдаваться. " , "Смысловая нагрузка " , 1);
         stringQueue.appender("Капец всему " , "Лирика");
         stringQueue.appender(" Золушка");
+        ArithmeticCalculator arithmeticCalculator = new ArithmeticCalculator( 5 , 10 , Operation.ADD );
+        System.out.println("Результат : ");
+        System.out.println();
+        arithmeticCalculator.calculate(Operation.SUBTRACT);
     }
 }
