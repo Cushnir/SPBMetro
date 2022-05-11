@@ -19,9 +19,5 @@ public class Main {
         stringQueue.appander("Главное в жизни - никогда не сдаваться. " , "Смысловая нагрузка " , 1);
         stringQueue.appender("Капец всему " , "Лирика");
         stringQueue.appender(" Золушка");
-        ArithmeticCalculator arithmeticCalculator = new ArithmeticCalculator( 5 , 10 , Operation.ADD );
-        System.out.println("Результат : ");
-        System.out.println();
-        arithmeticCalculator.calculate(Operation.SUBTRACT);
     }
 }

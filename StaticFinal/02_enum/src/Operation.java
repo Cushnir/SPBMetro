@@ -1,5 +1,5 @@
 public enum Operation {
-    ADD,
-    SUBTRACT,
+    ADD ,
+    SUBTRACT ,
     MULTIPLY
 }
