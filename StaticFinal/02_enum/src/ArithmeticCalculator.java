@@ -3,13 +3,13 @@ public class ArithmeticCalculator {
     private int y = 0;
     public final Operation arithmeticOperation;
 
-    public ArithmeticCalculator(int x, int y, Operation.arithmeticOperation) {
+    public ArithmeticCalculator(int x, int y, Operation arithmeticOperation) {
         this.x = x;
         this.y = y;
         this.arithmeticOperation = arithmeticOperation;
     }
 
-    public void calculate(Operation.arithmeticOperation) {
+    public void calculate(Operation arithmeticOperation) {
         if (arithmeticOperation == Operation.ADD) {
             int add = x + y;
             System.out.println("сложение чисел = " + add + "");
