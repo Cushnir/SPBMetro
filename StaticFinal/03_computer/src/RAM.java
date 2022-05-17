@@ -1,16 +1,16 @@
 public class RAM {
-    private final   String typeRAM;
+    public static   RamType typeRAM;
     private final   double volumeRAM;
     private final   double weightRAM;
 
-    public RAM(String typeRAM , double volumeRAM , double weightRAM){
-        this.typeRAM = typeRAM;
+    public RAM(RamType typeRAM , double volumeRAM , double weightRAM){
+        RAM.typeRAM = typeRAM;
         this.volumeRAM = volumeRAM;
         this.weightRAM = weightRAM;
         setToString();
         setTotalWeight();
     }
-    public RAM setTypeRAM(String typeRAM){
+    public RAM setTypeRAM(RamType typeRAM){
         return new RAM(typeRAM , volumeRAM , weightRAM);
     }
     public RAM setVolumeRAM(double volumeRAM){
@@ -18,9 +18,6 @@ public class RAM {
     }
     public RAM setWeightRAM( double weightRAM ){
         return new RAM(typeRAM , volumeRAM , weightRAM);
-    }
-    public String getTypeRAM(){
-        return typeRAM;
     }
     public double getVolumeRAM(){
         return volumeRAM;
