@@ -3,10 +3,11 @@ import java.util.Collections;
 import java.util.List;
 
 public class Company {
-    int incomeCompany = 5_000_000 + (int) (Math.random() * 10_000_000);
+    public int incomeCompany = 5_000_000 + (int) (Math.random() * 10_000_000);
     ArrayList<Employee> salarysEmployee = new ArrayList<>();
     ArrayList<Employee> topSalary = new ArrayList<>();
     ArrayList<Employee> lowSalary = new ArrayList<>();
+
 
     public void hire(Employee employee) {
         salarysEmployee.add(employee);
@@ -48,5 +49,10 @@ public class Company {
         }
 
         return lowSalary;
+    }
+    public void fireAll(){
+        for (int i = 0; i == (salarysEmployee.size() / 2); i++) {
+            salarysEmployee.remove(i);
+        }
     }
 }

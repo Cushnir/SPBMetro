@@ -5,7 +5,6 @@ public class TopManager extends Operator {
     public TopManager(int fixSalary) {
         super(fixSalary);
 
-
     }
 
     @Override

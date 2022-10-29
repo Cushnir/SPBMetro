@@ -17,6 +17,6 @@ public class Operator implements Employee {
     }
     @Override
     public String toString (){
-        return getClass().getName() + "Зароботная плата сотрудника = " + getMonthSalary();
+        return "\n" + getClass().getName() + " Зароботная плата сотрудника = " + getMonthSalary();
     }
 }
