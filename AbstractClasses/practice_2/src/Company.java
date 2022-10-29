@@ -51,7 +51,8 @@ public class Company {
         return lowSalary;
     }
     public void fireAll(){
-        for (int i = 0; i == (salarysEmployee.size() / 2); i++) {
+        int fire = salarysEmployee.size() / 2;
+        for (int i = 0; i < fire; i++) {
             salarysEmployee.remove(i);
         }
     }
