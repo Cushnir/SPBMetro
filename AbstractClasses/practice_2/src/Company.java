@@ -3,7 +3,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class Company {
-    public static int incomeCompany = 5_000_000 + (int) (Math.random() * 10_000_000);
+    public int incomeCompany = 5_000_000 + (int) (Math.random() * 10_000_000);
     ArrayList<Employee> salarysEmployee = new ArrayList<>();
     ArrayList<Employee> topSalary = new ArrayList<>();
     ArrayList<Employee> lowSalary = new ArrayList<>();

@@ -2,9 +2,9 @@ public class TopManager extends Operator {
     public int salary = 0;
     public int income  ;
 
-    public TopManager(int fixSalary) {
+    public TopManager(int fixSalary,int income) {
         super(fixSalary);
-        income = Company.incomeCompany;
+        this.income = income;
 
 
     }

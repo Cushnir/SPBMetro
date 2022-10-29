@@ -14,7 +14,7 @@ public class Main {
             topHolding.hire(new Operator(30000));
         }
         for (int i = 0; i < 10; i++) {
-            topHolding.hire(new TopManager(80000));
+            topHolding.hire(new TopManager(80000, topHolding.getIncome()));
         }
 
         System.out.println("Штат сотрудников = " + topHolding.salarysEmployee.size());
