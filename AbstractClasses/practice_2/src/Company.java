@@ -44,7 +44,7 @@ public class Company {
 
     public List<Employee> getLowestSalaryStaff(int count) {
         Collections.sort(salarysEmployee);
-        for (int i = 0; i == count; i++) {
+        for (int i = 0; i < count; i++) {
             lowSalary.add(salarysEmployee.get(i));
         }
 

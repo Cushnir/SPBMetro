@@ -11,6 +11,7 @@ public class Main {
             topHolding.hire(new Manager(50000));
         }
         System.out.println("Штат сотрудников = "+ topHolding.salarysEmployee.size());
+        topHolding.fireAll();
         System.out.println("Штат сотрудников = "+ topHolding.salarysEmployee.size());
 
         System.out.println(topHolding.getTopSalaryStaff(7));
