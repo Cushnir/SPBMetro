@@ -40,7 +40,7 @@ public class Company {
                 count--;
                 topSalary.add(salarysEmployee.get(i));
             }
-        }else {
+        } else {
             return null;
         }
         return topSalary;
@@ -52,7 +52,7 @@ public class Company {
             for (int i = 0; i < count; i++) {
                 lowSalary.add(salarysEmployee.get(i));
             }
-        }else {
+        } else {
             return null;
         }
 

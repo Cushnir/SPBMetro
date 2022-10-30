@@ -13,8 +13,9 @@ public class Manager implements Employee {
         salary = fixSalary + (int) (incomeManager * 0.05);
         return salary;
     }
+
     @Override
-    public String toString (){
+    public String toString() {
         return "\n" + getClass().getName() + " Зароботная плата сотрудника = " + getMonthSalary();
     }
 }

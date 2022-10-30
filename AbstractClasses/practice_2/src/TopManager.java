@@ -1,9 +1,9 @@
 public class TopManager implements Employee {
     public int salary;
-    public final int  income;
+    public final int income;
     public final int fixSalary;
 
-    public TopManager(int fixSalary,int income) {
+    public TopManager(int fixSalary, int income) {
         this.fixSalary = fixSalary;
         this.income = income;
 
@@ -21,7 +21,7 @@ public class TopManager implements Employee {
     }
 
     @Override
-    public String toString (){
+    public String toString() {
         return "\n" + getClass().getName() + " Зароботная плата сотрудника = " + getMonthSalary();
     }
 }
