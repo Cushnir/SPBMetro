@@ -34,18 +34,26 @@ public class Company {
     }
 
     public List<Employee> getTopSalaryStaff(int count) {
-        Collections.sort(salarysEmployee);
-        for (int i = salarysEmployee.size() - 1; 0 < count; i--) {
-            count--;
-            topSalary.add(salarysEmployee.get(i));
+        if (count <= salarysEmployee.size() && count > 0) {
+            Collections.sort(salarysEmployee);
+            for (int i = salarysEmployee.size() - 1; 0 < count; i--) {
+                count--;
+                topSalary.add(salarysEmployee.get(i));
+            }
+        }else {
+            return null;
         }
         return topSalary;
     }
 
     public List<Employee> getLowestSalaryStaff(int count) {
-        Collections.sort(salarysEmployee);
-        for (int i = 0; i < count; i++) {
-            lowSalary.add(salarysEmployee.get(i));
+        if (count <= salarysEmployee.size() && count > 0) {
+            Collections.sort(salarysEmployee);
+            for (int i = 0; i < count; i++) {
+                lowSalary.add(salarysEmployee.get(i));
+            }
+        }else {
+            return null;
         }
 
         return lowSalary;
