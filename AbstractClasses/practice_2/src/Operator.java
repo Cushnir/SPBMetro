@@ -1,5 +1,5 @@
 public class Operator implements Employee {
-    public final int fixSalary;
+    public  int fixSalary;
 
     public Operator(int fixSalary) {
         this.fixSalary = fixSalary;
@@ -10,11 +10,7 @@ public class Operator implements Employee {
         return fixSalary;
     }
 
-    @Override
-    public int compareTo(Object o) {
-        Operator operators = (Operator) o;
-        return Integer.compare(getMonthSalary(),operators.getMonthSalary());
-    }
+
     @Override
     public String toString (){
         return "\n" + getClass().getName() + " Зароботная плата сотрудника = " + getMonthSalary();

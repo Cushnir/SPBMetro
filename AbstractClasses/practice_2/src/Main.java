@@ -5,8 +5,6 @@ import java.util.Collections;
 public class Main {
     public static void main(String[] args) {
         Company topHolding = new Company();
-        ArrayList<Employee> topHoldings = new ArrayList<>();
-        Collections.sort(topHoldings);
         for (int i = 0; i < 180; i++) {
             topHolding.hire(new Manager(50000));
         }

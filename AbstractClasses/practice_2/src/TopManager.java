@@ -1,9 +1,10 @@
-public class TopManager extends Operator {
-    public int salary = 0;
-    public int income  ;
+public class TopManager implements Employee {
+    public int salary;
+    public final int  income;
+    public final int fixSalary;
 
     public TopManager(int fixSalary,int income) {
-        super(fixSalary);
+        this.fixSalary = fixSalary;
         this.income = income;
 
 
@@ -17,5 +18,10 @@ public class TopManager extends Operator {
             return fixSalary;
         }
         return salary;
+    }
+
+    @Override
+    public String toString (){
+        return "\n" + getClass().getName() + " Зароботная плата сотрудника = " + getMonthSalary();
     }
 }
