@@ -13,7 +13,7 @@ public class Main {
             COMMAND_EXAMPLES;
     private static final String helpText = "Command examples:\n" + COMMAND_EXAMPLES;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws WrongAmount{
         Scanner scanner = new Scanner(System.in);
         CustomerStorage executor = new CustomerStorage();
         logger = LogManager.getRootLogger();
@@ -26,16 +26,14 @@ public class Main {
             try {
                 if (tokens[0].equals("add")) {
                     if (tokens.length != 2) {
-                        System.out.println("Wrong Format");
-                        throw new IllegalArgumentException();
+                        throw new WrongAmount(command,"you do not enter the command to add in the required format");
                     }
                     executor.addCustomer(tokens[1]);
                 } else if (tokens[0].equals("list")) {
                     executor.listCustomers();
                 } else if (tokens[0].equals("remove")) {
                     if (tokens.length != 2) {
-                        System.out.println("the name of the client to be deleted is not entered");
-                        throw new IllegalArgumentException();
+                        throw new WrongAmount(command,"the name of the client to be deleted is not entered");
                     }
                     executor.removeCustomer(tokens[1]);
                 } else if (tokens[0].equals("count")) {
@@ -43,11 +41,10 @@ public class Main {
                 } else if (tokens[0].equals("help")) {
                     System.out.println(helpText);
                 } else {
-                    logger.error("Wrong command!:\t" + command);
-                    System.out.println(COMMAND_ERROR);
+                    throw new WrongAmount(command,COMMAND_ERROR);
                 }
-            } catch (IllegalArgumentException ex) {
-                logger.error("Wrong command!:\t" + command);
+            } catch (WrongAmount ex) {
+                logger.error(ex.getMessage() + ":\t"+ ex.getEr());
             }
         }
     }

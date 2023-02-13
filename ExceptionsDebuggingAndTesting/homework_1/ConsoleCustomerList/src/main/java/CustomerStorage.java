@@ -10,7 +10,7 @@ public class CustomerStorage {
         storage = new HashMap<>();
     }
 
-    public void addCustomer(String data) throws IllegalArgumentException {
+    public void addCustomer(String data) throws WrongAmount{
         final int INDEX_NAME = 0;
         final int INDEX_SURNAME = 1;
         final int INDEX_EMAIL = 2;
@@ -18,20 +18,16 @@ public class CustomerStorage {
 
         String[] components = data.split("\\s+");
         if (components.length != 4) {
-            System.out.println("Wrong Format");
-            throw new IllegalArgumentException();
+            throw new WrongAmount("Wrong Format", "incorrect customer details");
         }
         if (components[INDEX_SURNAME].matches(regexEmail)) {
-            System.out.println("Wrong format : you didn't enter your last name");
-            throw new IllegalArgumentException();
+            throw new WrongAmount(components[INDEX_SURNAME], "Wrong format : you didn't enter your last name");
         }
         if (!components[INDEX_PHONE].matches(regexNumer)) {
-            System.out.println("Wrong namber");
-            throw new IllegalArgumentException();
+            throw new WrongAmount(components[INDEX_PHONE], "Wrong namber");
         }
         if (!components[INDEX_EMAIL].matches(regexEmail)) {
-            System.out.println("Wrong email");
-            throw new IllegalArgumentException();
+            throw new WrongAmount(components[INDEX_EMAIL], "Wrong email");
         }
 
         String name = components[INDEX_NAME] + " " + components[INDEX_SURNAME];
@@ -39,19 +35,19 @@ public class CustomerStorage {
         System.out.println("Data added");
     }
 
-    public void listCustomers() {
+    public void listCustomers() throws WrongAmount{
         if (storage.isEmpty()) {
-            System.out.println("the list is empty");
+            throw new WrongAmount("Error", "the list is empty");
         }
         storage.values().forEach(System.out::println);
     }
 
-    public void removeCustomer(String name) throws IllegalArgumentException {
-        if (!storage.equals(name)) {
-            System.out.println("no such client");
-            throw new IllegalArgumentException();
+    public void removeCustomer(String name)  throws WrongAmount{
+        if (!storage.containsKey(name)) {
+            throw new WrongAmount("Wrong Format", "no such client");
         }
         storage.remove(name);
+        System.out.println("client deleted");
     }
 
     public Customer getCustomer(String name) {
