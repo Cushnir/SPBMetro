@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Set;
-
 public class RouteCalculator {
     private final StationIndex stationIndex;
 
@@ -76,7 +75,7 @@ public class RouteCalculator {
     }
 
     private List<Station> getRouteWithOneConnection(Station from, Station to) {
-        if (from.getLine().equals(to.getLine())) {
+        if (from.getLine().equals(to.getLine()) ) {
             return null;
         }
 
@@ -96,6 +95,9 @@ public class RouteCalculator {
                     }
                 }
             }
+        }
+        if (route.size() == 0 ) {
+            return null;
         }
         return route;
     }
